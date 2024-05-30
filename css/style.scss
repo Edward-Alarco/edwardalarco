@@ -6,27 +6,27 @@ $negro: #000000;
 
 @font-face {
     font-family: 'SFMonoLight';
-    src: url(fonts/SFMono/SFMonoLight.otf);
+    src: url(../fonts/SFMono/SFMonoLight.otf);
 }
 @font-face {
     font-family: 'SFMonoMedium';
-    src: url(fonts/SFMono/SFMonoMedium.otf);
+    src: url(../fonts/SFMono/SFMonoMedium.otf);
 }
 @font-face {
     font-family: 'CalibreBold';
-    src: url(fonts/Calibre/CalibreBold.otf);
+    src: url(../fonts/Calibre/CalibreBold.otf);
 }
 @font-face {
     font-family: 'CalibreRegular';
-    src: url(fonts/Calibre/CalibreRegular.otf);
+    src: url(../fonts/Calibre/CalibreRegular.otf);
 }
 @font-face {
     font-family: 'CalibreSemibold';
-    src: url(fonts/Calibre/CalibreSemibold.otf);
+    src: url(../fonts/Calibre/CalibreSemibold.otf);
 }
 @font-face {
     font-family: 'CalibreMedium';
-    src: url(fonts/Calibre/CalibreMedium.otf);
+    src: url(../fonts/Calibre/CalibreMedium.otf);
 }
 
 *{
@@ -528,6 +528,33 @@ header, footer, section, main{
             }
             h2{
                 color: $gris;
+                @media (min-width: 1000px){
+                    min-height: 88px;
+                }
+                @media (max-width: 1000px){
+                    min-height: 87px;
+                }
+                @media (max-width: 900px){
+                    min-height: 79px;
+                }
+                @media (max-width: 800px){
+                    min-height: 70px;
+                }
+                @media (max-width: 700px){
+                    min-height: 61px;
+                }
+                @media (max-width: 650px){
+                    min-height: 57px;
+                }
+                @media (max-width: 600px){
+                    min-height: 52px;
+                }
+                @media (max-width: 550px){
+                    min-height: 48px;
+                }
+                @media (max-width: 500px){
+                    min-height: 45px;
+                }
             }
         }
         &-description{
@@ -541,6 +568,33 @@ header, footer, section, main{
                 @include button(230px, 55.6px, 14px);
             }
         }
+    }
+}
+
+.ityped-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.3s infinite;
+    -moz-animation: blink 0.3s infinite;
+    animation: blink 0.3s infinite;
+    animation-direction: alternate;
+    display: none;
+}
+
+@keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes blink {
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes blink {
+    100% {
+        opacity: 0;
     }
 }
 
@@ -869,6 +923,10 @@ header, footer, section, main{
         a{
             @include button(135px, 55.6px, 14px);
             margin: 0 auto;
+        }
+        svg{
+            max-width: 18px;
+            fill: $verde;
         }
     }
 }
