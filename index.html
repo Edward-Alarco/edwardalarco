@@ -573,8 +573,17 @@
     </script>
     <script src="https://unpkg.com/ityped@1.0.3"></script>
     <script>
+        let strings,
+            x = window.matchMedia("(max-width: 700px)")
+
+        if(x.matches){
+            strings = ['Programador Web', 'Ing. de Sistemas'];
+        }else{
+            strings = ['Programador Web', 'Ingeniero de Sistemas'];
+        }
+
         ityped.init('#ityped', {
-            strings: ['Programador Web', 'Ingeniero de Sistemas'],
+            strings: strings,
             startDelay: 200,
             loop: true
         });
